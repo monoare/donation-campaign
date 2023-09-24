@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "picture": "https://i.ibb.co/yFSL9FQ/Health.png",
+    "picture_details": "https://i.ibb.co/HXMjH2d/Rectangle-4284.png",
+    "title": "Healing Hearts: Donate for Healthcare",
+    "category": "Health",
+    "category_bg": "#0052ff33",
+    "card_bg": "#0052ff26",
+    "text_button_bg": "#0052ff",
+    "description": "Our \"Healing Hearts: Donate for Healthcare\" campaign is dedicated to improving the well-being of individuals and families in need. Your generous contributions will directly support access to quality healthcare services, medical treatments, and vital resources for those facing health challenges. By donating, you're playing a crucial role in healing hearts and restoring hope for a healthier future.",
+    "price": "$29.99"
+  },
+  {
+    "id": 2,
+    "picture": "https://i.ibb.co/0p0tMJr/Education.png",
+    "picture_details": "https://i.ibb.co/Rpdg48r/Rectangle-4287-1.png",
+    "title": "Empower Minds: Donate for Education",
+    "category": "Education",
+    "category_bg": "#ff444a33",
+    "card_bg": "#ff444a26",
+    "text_button_bg": "#ff444a",
+    "description": "Our \"Empower Minds: Donate for Education\" campaign is all about transforming lives through the power of education. Your generous donations will provide underprivileged children and students with access to quality education, empowering them to break the cycle of poverty, reach their full potential, and build a brighter future. By contributing to this cause, you're not just giving money; you're giving the gift of knowledge and a pathway to success.",
+    "price": "$199.99"
+  },
+  {
+    "id": 3,
+    "picture": "https://i.ibb.co/47gMZy7/Clothing.png",
+    "picture_details": "https://i.ibb.co/CK1Mx9F/Rectangle-4287.png",
+    "title": "Warmth in Every Stitch: Donate for Clothing",
+    "category": "Clothing",
+    "category_bg": "#79c23f33",
+    "card_bg": "#79c23f26",
+    "text_button_bg": "#3498db",
+    "description": "\"Warmth in Every Stitch: Donate for Clothing\" is a campaign focused on providing comfort and dignity to those in need. Your generous contributions will help us collect and distribute clothing to individuals facing challenging circumstances, ensuring they have warmth and protection in every stitch. By donating, you're wrapping people in care and kindness, one garment at a time.",
+    "price": "$59.99"
+  },
+  {
+    "id": 4,
+    "picture": "https://i.ibb.co/kqR6FBK/Food.png",
+    "picture_details": "https://i.ibb.co/55nN0fv/Rectangle-4287-2.png",
+    "title": "Nourish the Hungry: Donate for Food",
+    "category": "Food",
+    "category_bg": "#f8714733",
+    "card_bg": "#f8714726",
+    "text_button_bg": "#87147",
+    "description": "\"Nourish the Hungry: Donate for Food\" is a campaign dedicated to providing nourishment and hope to those facing food insecurity. Your generous contributions will help us source, package, and distribute essential food items to individuals and families in need. By donating, you're not just giving food; you're providing sustenance, comfort, and a lifeline to those who hunger for a brighter tomorrow.",
+    "price": "$79.99"
+  },
+
+  {
+    "id": 5,
+    "picture": "https://i.ibb.co/YXjHSvN/Food2.jpg",
+    "picture_details": "https://i.ibb.co/fnfJsQT/Food21.jpg",
+    "title": "Feeding Hope: Support Food Initiatives",
+    "category": "Food",
+    "category_bg": "#f8714733",
+    "card_bg": "#f8714726",
+    "text_button_bg": "#87147",
+    "description": "Join us in \"Feeding Hope: Support Food Initiatives\" and become a beacon of hope for those struggling to put food on their tables. Your support will enable us to run food banks, community kitchens, and meal programs, ensuring that no one goes to bed hungry. Together, we can make a meaningful impact on hunger by providing nourishing meals and nourishing spirits.",
+    "price": "$399.99"
+  },
+  {
+    "id": 6,
+    "picture": "https://i.ibb.co/drrpWHk/Clothing2.jpg",
+    "picture_details": "https://i.ibb.co/QdpC0Xd/Clothing21.jpg",
+    "title": "Dress a Heart: Support Clothing Initiatives",
+    "category": "Clothing",
+    "category_bg": "#79c23f33",
+    "card_bg": "#79c23f26",
+    "text_button_bg": "#3498db",
+    "description": "Join us in \"Dress a Heart: Support Clothing Initiatives\" and be a part of a mission to empower individuals through the gift of clothing. Your support will enable us to organize clothing drives, supply essential attire to underserved communities, and offer assistance to those seeking to build their wardrobes. Together, we can make a meaningful impact on lives by providing the basic necessity of clothing.",
+    "price": "$199.99"
+  },
+  {
+    "id": 7,
+    "picture": "https://i.ibb.co/NW1jPk7/Education2.jpg",
+    "picture_details": "https://i.ibb.co/dLVcv3c/Education21.jpg",
+    "title": "Building Bright Futures: Support Education",
+    "category": "Education",
+    "category_bg": "#ff444a33",
+    "card_bg": "#ff444a26",
+    "text_button_bg": "#ff444a",
+    "description": "Join us in \"Building Bright Futures: Support Education\" and be a part of a movement that's dedicated to creating a world where every child has the opportunity to receive a quality education. Your support will help us construct schools, provide educational materials, and offer scholarships to deserving students. Together, we can build the foundation for a brighter and more prosperous future for generations to come.",
+    "price": "$49.99"
+  },
+  {
+    "id": 8,
+    "picture": "https://i.ibb.co/7VLR6v4/Health2.jpg",
+    "picture_details": "https://i.ibb.co/52jd0MM/Health21.jpg",
+    "title": "Healthy Lives, Bright Futures: Support Health Initiatives",
+    "category": "Health",
+    "category_bg": "#0052ff33",
+    "card_bg": "#0052ff26",
+    "text_button_bg": "#0052ff",
+    "description": "Join us in \"Healthy Lives, Bright Futures: Support Health Initiatives\" and be a part of a mission to empower individuals through the gift of clothing. Your support will enable us to organize clothing drives, supply essential attire to underserved communities, and offer assistance to those seeking to build their wardrobes. Together, we can make a meaningful impact on lives by providing the basic necessity of clothing.",
+    "price": "$69.99"
+  },
+
+  {
+    "id": 9,
+    "picture": "https://i.ibb.co/QdM7bnj/Health3.jpg",
+    "picture_details": "https://i.ibb.co/Zz7mhnY/Health31.jpg",
+    "title": "Product 6",
+    "category": "Health",
+    "category_bg": "#0052ff33",
+    "card_bg": "#0052ff26",
+    "text_button_bg": "#0052ff",
+    "description": "\"Caring for Wellness: Give the Gift of Health\" embodies the spirit of compassion and the belief that everyone deserves good health. Your donations will provide access to essential healthcare services, preventive care, and health education for underserved populations. By giving the gift of health, you're making a tangible difference in the lives of those who need it most.",
+    "price": "$299.99"
+  },
+  {
+    "id": 10,
+    "picture": "https://i.ibb.co/tqhLrnD/Education3.jpg",
+    "picture_details": "https://i.ibb.co/hKZB2sJ/Education31.jpg",
+    "title": "Education for All: Give the Gift of Learning",
+    "category": "Education",
+    "category_bg": "#ff444a33",
+    "card_bg": "#ff444a26",
+    "text_button_bg": "#ff444a",
+    "description": "\"Education for All: Give the Gift of Learning\" is a campaign driven by the belief that education is a basic human right, not a privilege. Your contributions will ensure that children in underserved communities, regardless of their circumstances, have access to a quality education. Your gift will open doors to knowledge, skills, and opportunities that can transform lives and uplift entire communities.",
+    "price": "$149.99"
+  },
+  {
+    "id": 9,
+    "picture": "https://i.ibb.co/80WP5kR/Clothing3.jpg",
+    "picture_details": "https://i.ibb.co/ZMXnKtr/Clothing31.jpg",
+    "title": "Clothe with Care: Give the Gift of Clothing",
+    "category": "Clothing",
+    "category_bg": "#79c23f33",
+    "card_bg": "#79c23f26",
+    "text_button_bg": "#3498db",
+    "description": "\"Clothe with Care: Give the Gift of Clothing\" embodies the idea that clothing is more than just fabric; it's a symbol of care and compassion. Your donations will help us clothe individuals and families who may be struggling to make ends meet. By giving the gift of clothing, you're ensuring that people have access to clean, comfortable attire, boosting their self-esteem and well-being.",
+    "price": "$39.99"
+  },
+  {
+    "id": 12,
+    "picture": "https://i.ibb.co/c8Sc2fX/Food3.jpg",
+    "picture_details": "https://i.ibb.co/Y31bJW1/Food31.jpg",
+    "title": "Share a Meal, Share a Smile: Give the Gift of Food",
+    "category": "Food",
+    "category_bg": "#f8714733",
+    "card_bg": "#f8714726",
+    "text_button_bg": "#87147",
+    "description": "\"Share a Meal, Share a Smile: Give the Gift of Food\" embodies the belief that a shared meal can bring comfort and joy. Your donations will help us provide warm meals and essential groceries to individuals and families in crisis. By giving the gift of food, you're spreading kindness and making a difference in the lives of those who need it most.",
+    "price": "$69.99"
+  }
+]
