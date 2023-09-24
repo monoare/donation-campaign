@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Header/Navbar/Navbar";
+import "../../font/font.css";
 import Banner from "../../components/Header/Banner/Banner";
 
 const Home = () => {
