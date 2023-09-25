@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
+import Donation from "../Donation/Donation";
 
-const CategoryCard = ({ donationCategory }) => {
-  const { id, picture, category, title, card_bg, text_color, category_bg } =
-    donationCategory || {};
+const DonationsCard = ({ card }) => {
+  const {
+    id,
+    picture,
+    category,
+    title,
+    card_bg,
+    text_color,
+    category_bg,
+    price,
+  } = card || {};
 
   const cardBgStyle = {
     backgroundColor: card_bg, // Set the background color dynamically
@@ -16,23 +25,14 @@ const CategoryCard = ({ donationCategory }) => {
     color: text_color, // Set the category text background color dynamically
   };
 
-  const handleAddToDonation = () => {
-    const addedToDonation = [];
-    const donationItems = JSON.parse(localStorage.getItem("card"));
-    if (!donationItems) {
-      addedToDonation.push(donationCategory);
-      localStorage.setItem("card", JSON.stringify(addedToDonation));
-    } else {
-      //   const isExisting = donationItems.find((donation) => donation.id === id);
-      addedToDonation.push(...donationItems, donationCategory);
-      localStorage.setItem("card", JSON.stringify(addedToDonation));
-    }
+  const ViewDetailsBgColor = {
+    backgroundColor: text_color,
   };
 
   return (
-    <div onClick={handleAddToDonation}>
+    <div className="flex justify-center items-center">
       <div
-        className="relative flex flex-col w-[312px] rounded-lg  bg-clip-border text-gray-700 shadow-md"
+        className="relative flex w-full rounded-lg  bg-clip-border text-gray-700 shadow-md"
         style={cardBgStyle}
       >
         <div className="relative overflow-hidden bg-clip-border">
@@ -50,11 +50,25 @@ const CategoryCard = ({ donationCategory }) => {
               {category}
             </p>
             <p
+              className="block text-sm font-medium max-w-fit px-3 py-1 rounded mt-5"
+              style={textLetterColor}
+            >
+              {price}
+            </p>
+            <p
               className="block text-base font-semibold mt-3 mb-4"
               style={textLetterColor}
             >
               {title}
             </p>
+            <Link to={`/donation/${id}`}>
+              <button
+                className="rounded max-w-fit px-4 py-2 text-white font-semibold capitalize text-lg"
+                style={ViewDetailsBgColor}
+              >
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -62,4 +76,4 @@ const CategoryCard = ({ donationCategory }) => {
   );
 };
 
-export default CategoryCard;
+export default DonationsCard;

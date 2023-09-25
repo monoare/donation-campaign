@@ -1,5 +1,3 @@
-import React from "react";
-import Banner from "../Banner/Banner";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
@@ -37,7 +35,7 @@ const Navbar = () => {
                       ? "pending"
                       : isActive
                       ? "text-[#FF444A] underline"
-                      : ""
+                      : "text-black"
                   }
                 >
                   Home
@@ -51,7 +49,7 @@ const Navbar = () => {
                       ? "pending"
                       : isActive
                       ? "text-[#FF444A] underline"
-                      : ""
+                      : "text-black"
                   }
                 >
                   Donations
@@ -65,7 +63,7 @@ const Navbar = () => {
                       ? "pending"
                       : isActive
                       ? "text-[#FF444A] underline"
-                      : ""
+                      : "text-black"
                   }
                 >
                   Statistics
@@ -85,7 +83,7 @@ const Navbar = () => {
                     ? "pending"
                     : isActive
                     ? "text-[#FF444A] underline"
-                    : ""
+                    : "text-black"
                 }
               >
                 Home
@@ -99,7 +97,7 @@ const Navbar = () => {
                     ? "pending"
                     : isActive
                     ? "text-[#FF444A] underline"
-                    : ""
+                    : "text-black"
                 }
               >
                 Donations
@@ -107,13 +105,13 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/donations"
+                to="/statistics"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
                     ? "text-[#FF444A] underline"
-                    : ""
+                    : "text-black"
                 }
               >
                 Statistics

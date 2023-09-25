@@ -43,7 +43,7 @@
     "category": "Food",
     "category_bg": "#f8714733",
     "card_bg": "#f8714726",
-    "text_color": "#87147",
+    "text_color": "#f87147",
     "description": "\"Nourish the Hungry: Donate for Food\" is a campaign dedicated to providing nourishment and hope to those facing food insecurity. Your generous contributions will help us source, package, and distribute essential food items to individuals and families in need. By donating, you're not just giving food; you're providing sustenance, comfort, and a lifeline to those who hunger for a brighter tomorrow.",
     "price": "$79.99"
   },
@@ -56,7 +56,7 @@
     "category": "Food",
     "category_bg": "#f8714733",
     "card_bg": "#f8714726",
-    "text_color": "#87147",
+    "text_color": "#f87147",
     "description": "Join us in \"Feeding Hope: Support Food Initiatives\" and become a beacon of hope for those struggling to put food on their tables. Your support will enable us to run food banks, community kitchens, and meal programs, ensuring that no one goes to bed hungry. Together, we can make a meaningful impact on hunger by providing nourishing meals and nourishing spirits.",
     "price": "$399.99"
   },
@@ -101,7 +101,7 @@
     "id": 9,
     "picture": "https://i.ibb.co/QdM7bnj/Health3.jpg",
     "picture_details": "https://i.ibb.co/Zz7mhnY/Health31.jpg",
-    "title": "Product 6",
+    "title": "Supporting Health and Wellness: Your Donation Matters",
     "category": "Health",
     "category_bg": "#0052ff33",
     "card_bg": "#0052ff26",
@@ -141,7 +141,7 @@
     "category": "Food",
     "category_bg": "#f8714733",
     "card_bg": "#f8714726",
-    "text_color": "#87147",
+    "text_color": "#f87147",
     "description": "\"Share a Meal, Share a Smile: Give the Gift of Food\" embodies the belief that a shared meal can bring comfort and joy. Your donations will help us provide warm meals and essential groceries to individuals and families in crisis. By giving the gift of food, you're spreading kindness and making a difference in the lives of those who need it most.",
     "price": "$69.99"
   }

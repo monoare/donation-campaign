@@ -10,7 +10,7 @@ const Banner = () => {
           backgroundImage: "url( https://i.ibb.co/VYhk1ym/Rectangle-4281.png)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-60 bg-[#F2F2F2]"></div>
         <div className="h-[80vh] w-full text-center text-neutral-content flex flex-col">
           <Navbar></Navbar>
           <div className="flex flex-col items-center justify-center my-auto">

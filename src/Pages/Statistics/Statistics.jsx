@@ -1,7 +1,11 @@
+import Navbar from "../../components/Header/Navbar/Navbar";
+import StatisticsChart from "./StatisticsChart";
+
 const Statistics = () => {
   return (
     <div>
-      <p>This is Statistics</p>
+      <Navbar></Navbar>
+      <StatisticsChart></StatisticsChart>
     </div>
   );
 };
