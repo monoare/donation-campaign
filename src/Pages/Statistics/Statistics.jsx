@@ -1,9 +1,7 @@
-import React from "react";
-
 const Statistics = () => {
   return (
     <div>
-      <P>This is Statistics</P>
+      <p>This is Statistics</p>
     </div>
   );
 };
