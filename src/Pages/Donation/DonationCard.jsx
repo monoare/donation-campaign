@@ -1,25 +1,42 @@
 import React from "react";
 
 const DonationCard = ({ donationViewDetails }) => {
-  const { id, picture, category, title, card_bg, text_color, category_bg } =
+  const { picture_details, title, text_color, price, description } =
     donationViewDetails || {};
   console.log(donationViewDetails);
 
+  const detailsButtonBgColor = {
+    backgroundColor: text_color,
+  };
+
   return (
-    <div>
-      <div className="relative flex flex-col w-[312px] rounded-lg  bg-clip-border text-gray-700 shadow-md">
+    <div className="my-20">
+      <div className="relative flex flex-col w-[80vw] mx-auto rounded-lg  bg-clip-border text-gray-700">
         <div className="relative overflow-hidden bg-clip-border">
-          <img
-            src={picture}
-            className="h-[194px] w-full rounded-t-lg  object-cover"
-          />
+          <div>
+            <img
+              src={picture_details}
+              className="rounded-t-lg h-[700px] object-cover"
+            />
+          </div>
+
+          <div className="relative bottom-32 hero-overlay bg-[#0b0b0b80] bg-opacity-65 h-32">
+            <div className="relative top-9 left-9">
+              <button
+                style={detailsButtonBgColor}
+                className="text-xl font-semibold text-white px-6 py-4 rounded"
+              >
+                Donate {price}
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="px-6">
+        <div className="">
           <div className="mb-2 flex flex-col">
-            <p className="block text-sm font-medium max-w-fit px-3 py-1 rounded mt-5">
-              {category}
+            <p className="block text-4xl font-bold -mt-24 mb-4 text-black">
+              {title}
             </p>
-            <p className="block text-base font-semibold mt-3 mb-4">{title}</p>
+            <p className="pb-10 mt-6 text-justify">{description}</p>
           </div>
         </div>
       </div>

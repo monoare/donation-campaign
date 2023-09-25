@@ -7,7 +7,7 @@ const Donation = () => {
   const { id } = useParams();
   const categories = useLoaderData();
   const idInt = parseInt(id);
-  console.log(typeof idInt, categories);
+  //   console.log(typeof idInt, categories);
 
   useEffect(() => {
     const findDetails = categories.find((detail) => detail.id === idInt);
@@ -18,7 +18,10 @@ const Donation = () => {
     <div>
       <Navbar></Navbar>
       <div>
-        <DonationCard donationViewDetails={donationViewDetails}></DonationCard>
+        <DonationCard
+          key={id}
+          donationViewDetails={donationViewDetails}
+        ></DonationCard>
       </div>
     </div>
   );
