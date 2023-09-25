@@ -1,17 +1,37 @@
-import React from "react";
 import swal from "sweetalert";
 
 const DonationCard = ({ donationViewDetails }) => {
-  const { picture_details, title, text_color, price, description } =
+  const { id, picture_details, title, text_color, price, description } =
     donationViewDetails || {};
-  console.log(donationViewDetails);
+  //   console.log(donationViewDetails);
 
   const detailsButtonBgColor = {
     backgroundColor: text_color,
   };
 
   const handleClickButton = () => {
-    swal("Thanks!", "You have Donated Successfully!", "success");
+    const priceArray = [];
+
+    const findDonation = JSON.parse(localStorage.getItem("donationPrice"));
+
+    //jokhon kisu nai tokhon e if vitor dhukba
+    if (!findDonation) {
+      priceArray.push(price);
+      localStorage.setItem("donationPrice", JSON.stringify(priceArray));
+      swal("Good job!", "Products added successfully!", "success");
+    } else {
+      const isExits = findDonation.find((price) => price.id === id);
+
+      if (!isExits) {
+        priceArray.push(...findDonation, price);
+        localStorage.setItem("donationPrice", JSON.stringify(priceArray));
+        swal("Good job!", "Products added successfully!", "success");
+      } else {
+        swal("Error!", "No duplicate !", "error");
+      }
+    }
+
+    console.log(priceArray);
   };
 
   return (
