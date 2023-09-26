@@ -1,18 +1,36 @@
-import React, { PureComponent, useEffect, useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Sector,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-  Legend,
-  Label,
-} from "recharts";
+import React, { useCallback, useEffect, useState } from "react";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
+const COLORS = ["#FF444A", "#00C49F", "#FFBB28", "#FF8042"];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+  index,
+}) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      textAnchor={x > cx ? "start" : "end"}
+      dominantBaseline="central"
+    >
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
 const StatisticsChart = ({ totalPrice }) => {
   const [price, setPrice] = useState([]);
-  console.log(totalPrice);
 
   useEffect(() => {
     fetch("donation.json")
@@ -26,34 +44,29 @@ const StatisticsChart = ({ totalPrice }) => {
     0
   );
 
-  const percentOfTotalPrice = (totalPrice * 100) / grossPrice;
-  console.log(percentOfTotalPrice);
-
   const data = [
-    { name: "Your Donation", value: percentOfTotalPrice },
-    { name: "Total Donation", value: 100 },
+    { name: "Total Donation", value: grossPrice },
+    { name: "Your Donation", value: totalPrice },
   ];
 
   return (
     <PieChart width={450} height={450}>
       <Pie
         data={data}
-        dataKey="value"
         cx={200}
         cy={200}
-        outerRadius={180}
-        fill="#00C49F"
-        label
+        labelLine={false}
+        label={renderCustomizedLabel}
+        outerRadius={150}
+        fill="#8884d8"
+        dataKey="value"
       >
         {data.map((entry, index) => (
-          <Cell
-            key={`cell-${index}`}
-            fill={index === 0 ? "#00C49F" : "#FF444A"}
-          />
+          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
       <Tooltip />
-      <Legend />
+      <Legend iconType="plainline" iconSize={80} />
     </PieChart>
   );
 };

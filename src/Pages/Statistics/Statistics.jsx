@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { PureComponent, useEffect, useState } from "react";
 import Navbar from "../../components/Header/Navbar/Navbar";
 import StatisticsChart from "./StatisticsChart";
 
