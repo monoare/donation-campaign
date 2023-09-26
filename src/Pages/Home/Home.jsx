@@ -1,4 +1,3 @@
-import React from "react";
 import "../../font/font.css";
 import Banner from "../../components/Header/Banner/Banner";
 import { useLoaderData } from "react-router-dom";

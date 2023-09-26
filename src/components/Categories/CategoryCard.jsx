@@ -5,15 +5,15 @@ const CategoryCard = ({ donationCategory }) => {
     donationCategory || {};
 
   const cardBgStyle = {
-    backgroundColor: card_bg, // Set the background color dynamically
+    backgroundColor: card_bg,
   };
   const textLetterColor = {
-    color: text_color, // Set the text color dynamically
+    color: text_color,
   };
 
   const CategoryBgColor = {
     backgroundColor: category_bg,
-    color: text_color, // Set the category text background color dynamically
+    color: text_color,
   };
 
   const handleAddToDonation = () => {

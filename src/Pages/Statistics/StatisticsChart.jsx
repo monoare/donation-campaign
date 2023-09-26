@@ -1,5 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const COLORS = ["#FF444A", "#00C49F", "#FFBB28", "#FF8042"];
 
@@ -49,26 +56,35 @@ const StatisticsChart = ({ totalPrice }) => {
     { name: "Your Donation", value: totalPrice },
   ];
 
+  const isMobile = window.innerWidth <= 450;
+
   return (
-    <PieChart width={450} height={450}>
-      <Pie
-        className="text-3xl font-semibold"
-        data={data}
-        cx={200}
-        cy={200}
-        labelLine={false}
-        label={renderCustomizedLabel}
-        outerRadius={150}
-        fill="#8884d8"
-        dataKey="value"
-      >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-      <Tooltip />
-      <Legend iconType="plainline" iconSize={80} />
-    </PieChart>
+    <div className="chart-container">
+      <ResponsiveContainer width="100%" height={450}>
+        <PieChart>
+          <Pie
+            className="text-base md:text-3xl md:font-semibold"
+            data={data}
+            cx={isMobile ? 150 : 200}
+            cy={isMobile ? 150 : 200}
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={isMobile ? 100 : 150}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
+          </Pie>
+          <Tooltip />
+          <Legend></Legend>
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 

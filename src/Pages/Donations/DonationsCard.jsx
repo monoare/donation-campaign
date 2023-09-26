@@ -32,38 +32,38 @@ const DonationsCard = ({ card }) => {
   return (
     <div className="flex justify-center items-center">
       <div
-        className="relative flex w-full rounded-lg  bg-clip-border text-gray-700 shadow-md"
+        className="relative flex flex-col text-center md:text-left md:flex-row w-full rounded-lg  bg-clip-border text-gray-700 shadow-md"
         style={cardBgStyle}
       >
         <div className="relative overflow-hidden bg-clip-border">
           <img
             src={picture}
-            className="h-[194px] w-full rounded-t-lg  object-cover"
+            className="md:h-full w-full rounded-l-lg  object-cover"
           />
         </div>
-        <div className="px-6">
+        <div className="px-2 md:px-6">
           <div className="mb-2 flex flex-col">
             <p
-              className="block text-sm font-medium max-w-fit px-3 py-1 rounded mt-5"
+              className="block text-sm font-medium lg:max-w-fit px-3 py-1 rounded mt-5"
               style={CategoryBgColor}
             >
               {category}
             </p>
             <p
-              className="block text-sm font-medium max-w-fit px-3 py-1 rounded mt-5"
+              className="block text-sm font-medium lg:max-w-fit px-3 py-1 rounded mt-2 lg:mt-5"
               style={textLetterColor}
             >
-              {price}
+              $ {price}
             </p>
             <p
-              className="block text-base font-semibold mt-3 mb-4"
+              className="block text-sm lg:text-base font-semibold mt-3 mb-4"
               style={textLetterColor}
             >
               {title}
             </p>
             <Link to={`/donation/${id}`}>
               <button
-                className="rounded max-w-fit px-4 py-2 text-white font-semibold capitalize text-lg"
+                className="rounded w-full lg:max-w-fit lg:px-4 py-1 lg:py-2 text-white font-semibold capitalize text-sm lg:text-lg"
                 style={ViewDetailsBgColor}
               >
                 View Details

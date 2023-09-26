@@ -27,7 +27,10 @@ const Statistics = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
+      <div className="mt-4 md:mt-10">
+        <Navbar></Navbar>
+      </div>
+
       <div>
         {noFound && (
           <div>
@@ -35,7 +38,7 @@ const Statistics = () => {
           </div>
         )}
       </div>
-      <div className="flex justify-center mt-10 text-lg">
+      <div className="text-lg mt-5 md:mt-10 md:ml-48 lg:ml-96">
         <StatisticsChart totalPrice={totalPrice}></StatisticsChart>
       </div>
     </div>
