@@ -14,15 +14,15 @@ const Banner = () => {
         <div className="h-[80vh] w-full text-center text-neutral-content flex flex-col">
           <Navbar></Navbar>
           <div className="flex flex-col items-center justify-center my-auto">
-            <h1 className="mb-10 text-5xl font-bold text-[#0B0B0B]">
+            <h1 className="mb-10 text-3xl md:text-5xl font-bold text-[#0B0B0B]">
               I Grow By Helping People In Need
             </h1>
             <div className="join mb-[210px]">
               <input
-                className="w-[470px] input input-bordered join-item"
+                className="md:w-[470px] input input-bordered join-item"
                 placeholder="Search Here..."
               />
-              <button className="btn w-28 capitalize text-base text-white bg-[#FF444A] join-item">
+              <button className="btn md:w-28 capitalize text-base text-white bg-[#FF444A] join-item">
                 Search
               </button>
             </div>

@@ -14,7 +14,6 @@ const DonationCard = ({ donationViewDetails }) => {
 
     const findDonation = JSON.parse(localStorage.getItem("donationPrice"));
 
-    //jokhon kisu nai tokhon e if vitor dhukba
     if (!findDonation) {
       priceArray.push(price);
       localStorage.setItem("donationPrice", JSON.stringify(priceArray));
@@ -41,7 +40,7 @@ const DonationCard = ({ donationViewDetails }) => {
           <div>
             <img
               src={picture_details}
-              className="rounded-t-lg h-[700px] object-cover"
+              className="rounded-t-lg w-full h-[700px] object-cover"
             />
           </div>
 
