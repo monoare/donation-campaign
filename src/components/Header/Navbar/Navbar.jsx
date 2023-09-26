@@ -1,15 +1,26 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <div className="md:mx-32">
+    <div className="lg:mx-32">
       <div className="flex justify-between items-center bg-transparent">
         {/* Mobile View */}
         <div className="md:hidden">
           <div className="navbar-start">
             <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost">
+              <label
+                tabIndex={0}
+                className="btn btn-primary ml-5"
+                onClick={toggleDropdown}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -25,53 +36,55 @@ const Navbar = () => {
                   />
                 </svg>
               </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
-              >
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                        ? "text-[#FF444A] underline"
-                        : "text-black"
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/donations"
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                        ? "text-[#FF444A] underline"
-                        : "text-black"
-                    }
-                  >
-                    Donations
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/statistics"
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                        ? "text-[#FF444A] underline"
-                        : "text-black"
-                    }
-                  >
-                    Statistics
-                  </NavLink>
-                </li>
-              </ul>
+              {isDropdownOpen && (
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
+                >
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-[#FF444A] underline"
+                          : "text-black"
+                      }
+                    >
+                      Home
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/donations"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-[#FF444A] underline"
+                          : "text-black"
+                      }
+                    >
+                      Donations
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/statistics"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-[#FF444A] underline"
+                          : "text-black"
+                      }
+                    >
+                      Statistics
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
             </div>
           </div>
         </div>

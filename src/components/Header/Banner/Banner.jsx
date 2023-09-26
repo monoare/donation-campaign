@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 
 const Banner = () => {
@@ -12,7 +12,10 @@ const Banner = () => {
       >
         <div className="hero-overlay bg-opacity-60 bg-[#F2F2F2]"></div>
         <div className="h-[80vh] w-full text-center text-neutral-content flex flex-col">
-          <Navbar></Navbar>
+          <div className="mt-5">
+            <Navbar></Navbar>
+          </div>
+
           <div className="flex flex-col items-center justify-center my-auto">
             <h1 className="mb-10 text-3xl md:text-5xl font-bold text-[#0B0B0B]">
               I Grow By Helping People In Need
