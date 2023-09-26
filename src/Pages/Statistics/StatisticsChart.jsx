@@ -52,6 +52,7 @@ const StatisticsChart = ({ totalPrice }) => {
   return (
     <PieChart width={450} height={450}>
       <Pie
+        className="text-3xl font-semibold"
         data={data}
         cx={200}
         cy={200}

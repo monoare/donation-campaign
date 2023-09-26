@@ -35,7 +35,7 @@ const Statistics = () => {
           </div>
         )}
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 text-lg">
         <StatisticsChart totalPrice={totalPrice}></StatisticsChart>
       </div>
     </div>
