@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 
-const Banner = () => {
+const Banner = ({ categories, onSearch }) => {
+  const [search, setSearch] = useState("");
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    onSearch(search);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div>
       <div
@@ -21,13 +32,17 @@ const Banner = () => {
               I Grow By Helping People In Need
             </h1>
             <div className="join mb-[210px]">
-              <input
-                className="md:w-[470px] input input-bordered join-item"
-                placeholder="Search Here..."
-              />
-              <button className="btn md:w-28 capitalize text-base text-white bg-[#FF444A] join-item">
-                Search
-              </button>
+              <form onSubmit={handleSearchSubmit}>
+                <input
+                  onChange={handleSearchChange}
+                  name="search"
+                  className="md:w-[470px] input input-bordered join-item text-black"
+                  placeholder="Search Here..."
+                />
+                <button className="btn md:w-28 capitalize text-base text-white bg-[#FF444A] join-item">
+                  Search
+                </button>
+              </form>
             </div>
           </div>
         </div>

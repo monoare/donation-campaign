@@ -1,14 +1,48 @@
-import "../../font/font.css";
+import React, { useState, useEffect } from "react";
 import Banner from "../../components/Header/Banner/Banner";
-import { useLoaderData } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-  const categories = useLoaderData();
+  const categoriesData = useLoaderData();
+  const [categories, setCategories] = useState(categoriesData);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [showNoResultsMessage, setShowNoResultsMessage] = useState(false);
+
+  // Filter and sort categories based on search term and selected category
+  useEffect(() => {
+    let filteredCategories = categoriesData.filter((category) => {
+      return (
+        category.category.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        (selectedCategory === "" || category.category === selectedCategory)
+      );
+    });
+
+    setCategories(filteredCategories);
+
+    // Show the "No results" message if there are no matching categories
+    setShowNoResultsMessage(filteredCategories.length === 0);
+  }, [searchTerm, selectedCategory, categoriesData]);
+
+  const handleSearch = (search) => {
+    setSearchTerm(search);
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
   return (
     <div>
-      <Banner></Banner>
-      <Categories categories={categories}></Categories>
+      <Banner categories={categories} onSearch={handleSearch}></Banner>
+      {showNoResultsMessage ? (
+        <div className="text-center text-red-500 mt-5 text-3xl font-semibold">
+          No matching categories found.
+        </div>
+      ) : (
+        <Categories categories={categories}></Categories>
+      )}
     </div>
   );
 };
