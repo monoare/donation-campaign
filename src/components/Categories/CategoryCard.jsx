@@ -33,7 +33,7 @@ const CategoryCard = ({ donationCategory }) => {
     <Link to={`/donation/${id}`}>
       <div onClick={handleAddToDonation}>
         <div
-          className="relative flex flex-col w-[312px] rounded-lg  bg-clip-border text-gray-700 shadow-md"
+          className="relative flex flex-col max-w-fit rounded-lg  bg-clip-border text-gray-700 shadow-md"
           style={cardBgStyle}
         >
           <div className="relative overflow-hidden bg-clip-border">
