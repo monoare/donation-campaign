@@ -7,30 +7,22 @@ const Home = () => {
   const categoriesData = useLoaderData();
   const [categories, setCategories] = useState(categoriesData);
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
   const [showNoResultsMessage, setShowNoResultsMessage] = useState(false);
 
   // Filter and sort categories based on search term and selected category
   useEffect(() => {
     let filteredCategories = categoriesData.filter((category) => {
-      return (
-        category.category.toLowerCase().includes(searchTerm.toLowerCase()) &&
-        (selectedCategory === "" || category.category === selectedCategory)
-      );
+      return category.category.toLowerCase().match(searchTerm.toLowerCase());
     });
 
     setCategories(filteredCategories);
 
     // Show the "No results" message if there are no matching categories
     setShowNoResultsMessage(filteredCategories.length === 0);
-  }, [searchTerm, selectedCategory, categoriesData]);
+  }, [searchTerm, categoriesData]);
 
   const handleSearch = (search) => {
     setSearchTerm(search);
-  };
-
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
   };
 
   return (

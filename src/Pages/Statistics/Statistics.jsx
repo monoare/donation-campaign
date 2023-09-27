@@ -1,9 +1,8 @@
-import { PureComponent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../../components/Header/Navbar/Navbar";
 import StatisticsChart from "./StatisticsChart";
 
 const Statistics = () => {
-  const [donationPrice, setDonationPrice] = useState([]);
   const [noFound, setNoFound] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -11,8 +10,6 @@ const Statistics = () => {
     const findDonation = JSON.parse(localStorage.getItem("donationPrice"));
 
     if (findDonation) {
-      setDonationPrice(findDonation);
-
       const total = findDonation.reduce(
         (preValue, currentItem) =>
           parseFloat(preValue) + parseFloat(currentItem),
@@ -21,7 +18,7 @@ const Statistics = () => {
 
       setTotalPrice(total);
     } else {
-      setNoFound("No Data Found");
+      setNoFound("No Data Found!");
     }
   }, []);
 
@@ -32,14 +29,15 @@ const Statistics = () => {
       </div>
 
       <div>
-        {noFound && (
-          <div>
+        {noFound ? (
+          <div className="text-5xl text-center font-semibold text-red-500 mt-20">
             <p>{noFound}</p>
           </div>
+        ) : (
+          <div className="text-lg mt-5 md:mt-10 md:ml-48 lg:ml-96">
+            <StatisticsChart totalPrice={totalPrice}></StatisticsChart>
+          </div>
         )}
-      </div>
-      <div className="text-lg mt-5 md:mt-10 md:ml-48 lg:ml-96">
-        <StatisticsChart totalPrice={totalPrice}></StatisticsChart>
       </div>
     </div>
   );
