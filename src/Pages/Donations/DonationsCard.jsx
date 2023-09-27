@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Donation from "../Donation/Donation";
+import PropTypes from "prop-types";
 
 const DonationsCard = ({ card }) => {
   const {
@@ -61,19 +61,22 @@ const DonationsCard = ({ card }) => {
             >
               {title}
             </p>
-            <Link to={`/donation/${id}`}>
-              <button
-                className="rounded w-full lg:max-w-fit lg:px-4 py-1 lg:py-2 text-white font-semibold capitalize text-sm lg:text-lg"
-                style={ViewDetailsBgColor}
-              >
-                View Details
-              </button>
-            </Link>
+
+            <button
+              className="rounded w-full lg:max-w-fit lg:px-4 py-1 lg:py-2 text-white font-semibold capitalize text-sm lg:text-lg"
+              style={ViewDetailsBgColor}
+            >
+              View Details
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+DonationsCard.propTypes = {
+  card: PropTypes.array,
 };
 
 export default DonationsCard;

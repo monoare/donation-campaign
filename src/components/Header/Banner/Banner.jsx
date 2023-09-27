@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import Navbar from "../Navbar/Navbar";
 
-const Banner = ({ categories, onSearch }) => {
+const Banner = ({ onSearch }) => {
   const [search, setSearch] = useState("");
 
   const handleSearchSubmit = (e) => {
@@ -28,7 +29,7 @@ const Banner = ({ categories, onSearch }) => {
           </div>
 
           <div className="flex flex-col items-center justify-center my-auto">
-            <h1 className="mb-10 text-3xl md:text-5xl font-bold text-[#0B0B0B]">
+            <h1 className="mt-4 mb-10 text-3xl lg:text-5xl font-bold text-[#0B0B0B]">
               I Grow By Helping People In Need
             </h1>
             <div className="join mb-[210px]">
@@ -49,6 +50,10 @@ const Banner = ({ categories, onSearch }) => {
       </div>
     </div>
   );
+};
+
+Banner.propTypes = {
+  onSearch: PropTypes.func,
 };
 
 export default Banner;

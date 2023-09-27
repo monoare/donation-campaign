@@ -1,4 +1,5 @@
 import CategoryCard from "./CategoryCard";
+import PropTypes from "prop-types";
 
 const Categories = ({ categories }) => {
   return (
@@ -13,6 +14,10 @@ const Categories = ({ categories }) => {
       </div>
     </div>
   );
+};
+
+Categories.propTypes = {
+  categories: PropTypes.array,
 };
 
 export default Categories;

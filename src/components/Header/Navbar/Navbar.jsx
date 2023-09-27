@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { useState } from "react";
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                           : "text-black"
                       }
                     >
-                      Donations
+                      Donation
                     </NavLink>
                   </li>
                   <li>
@@ -122,7 +122,7 @@ const Navbar = () => {
                       : "text-black"
                   }
                 >
-                  Donations
+                  Donation
                 </NavLink>
               </li>
               <li>

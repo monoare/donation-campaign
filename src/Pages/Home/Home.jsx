@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Banner from "../../components/Header/Banner/Banner";
 import Categories from "../../components/Categories/Categories";
 import { useLoaderData } from "react-router-dom";
@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div>
-      <Banner categories={categories} onSearch={handleSearch}></Banner>
+      <Banner onSearch={handleSearch}></Banner>
       {showNoResultsMessage ? (
         <div className="text-center text-red-500 mt-5 text-3xl font-semibold">
           No matching categories found.

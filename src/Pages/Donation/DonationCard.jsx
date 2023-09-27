@@ -1,4 +1,6 @@
 import swal from "sweetalert";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 const DonationCard = ({ donationViewDetails }) => {
   const { id, picture_details, title, text_color, price, description } =
@@ -19,7 +21,7 @@ const DonationCard = ({ donationViewDetails }) => {
       localStorage.setItem("donationPrice", JSON.stringify(priceArray));
       swal("Good job!", "Products added successfully!", "success");
     } else {
-      const isExits = findDonation.find((price) => price.id === id);
+      const isExits = findDonation.find((item) => item.id === id);
 
       if (!isExits) {
         priceArray.push(...findDonation, price);
@@ -67,6 +69,10 @@ const DonationCard = ({ donationViewDetails }) => {
       </div>
     </div>
   );
+};
+
+DonationCard.propTypes = {
+  donationViewDetails: PropTypes.object,
 };
 
 export default DonationCard;

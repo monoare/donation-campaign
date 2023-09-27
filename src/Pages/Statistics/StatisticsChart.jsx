@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import {
   PieChart,
   Pie,
@@ -87,4 +88,7 @@ const StatisticsChart = ({ totalPrice }) => {
   );
 };
 
+StatisticsChart.propTypes = {
+  totalPrice: PropTypes.array,
+};
 export default StatisticsChart;
