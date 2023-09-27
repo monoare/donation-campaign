@@ -24,7 +24,7 @@ const Banner = ({ onSearch }) => {
       >
         <div className="hero-overlay bg-opacity-60 bg-[#F2F2F2]"></div>
         <div className="h-[80vh] w-full text-center text-neutral-content flex flex-col">
-          <div className="mt-5">
+          <div className="mt-5 md:mt-10">
             <Navbar></Navbar>
           </div>
 

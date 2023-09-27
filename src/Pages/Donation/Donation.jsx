@@ -16,7 +16,9 @@ const Donation = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
+      <div className="mt-5 md:mt-10">
+        <Navbar></Navbar>
+      </div>
       <div>
         <DonationCard
           key={id}
